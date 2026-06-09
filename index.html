@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AVS Remake</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div id="root">
+    <header id="toolbar">
+      <span class="title">AVS Remake</span>
+      <select id="effect-select"></select>
+      <button id="btn-add-effect">+ Add</button>
+      <button id="btn-dup-effect">x2</button>
+      <button id="btn-load-preset">Load Preset</button>
+      <button id="btn-save-preset">Save Preset</button>
+      <button id="btn-saveas-preset">Save As</button>
+      <button id="btn-toggle-mic">&#9654; Mic</button>
+      <button id="btn-load-mp3">&#9654; MP3</button>
+      <input id="preset-file-input" type="file" accept=".json" style="display:none" />
+      <input id="mp3-file-input"    type="file" accept=".mp3,audio/*" style="display:none" />
+      <button id="btn-inspector">Inspect</button>
+      <span id="fps-counter">0 fps</span>
+    </header>
+    <div id="main">
+      <aside id="chain-panel">
+        <div id="chain-list"></div>
+        <div id="inspector-panel" hidden>
+          <div class="inspector-header">Pixel Inspector</div>
+          <div class="inspector-coords">
+            <label>X <input id="inspector-x" type="number" min="0" value="0"></label>
+            <label>Y <input id="inspector-y" type="number" min="0" value="0"></label>
+          </div>
+          <div class="inspector-readout">
+            <div id="inspector-swatch"></div>
+            <span id="inspector-rgb">—</span>
+          </div>
+          <div id="inspector-hint">Click canvas to pick</div>
+        </div>
+      </aside>
+      <div class="panel-resizer" id="resizer-left"></div>
+      <div id="canvas-area">
+        <canvas id="avs-canvas"></canvas>
+      </div>
+      <div class="panel-resizer" id="resizer-right"></div>
+      <aside id="config-panel">
+        <div id="config-content"><p class="placeholder">Select an effect to configure it.</p></div>
+      </aside>
+    </div>
+  </div>
+  <script type="module" src="/src/ui/app.js"></script>
+</body>
+</html>

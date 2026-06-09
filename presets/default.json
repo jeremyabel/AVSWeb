@@ -1,0 +1,25 @@
+{
+  "version": "1.0",
+  "effects": [
+    {
+      "type": "Fadeout",
+      "enabled": true,
+      "config": { "fade": 0.75, "color": [0, 0, 0] }
+    },
+    {
+      "type": "Starfield",
+      "enabled": true,
+      "config": { "starCount": 200, "speed": 1.5, "color": [180, 180, 255] }
+    },
+    {
+      "type": "Simple",
+      "enabled": true,
+      "config": { "mode": 2, "channel": 0, "colors": [[0, 200, 255]], "blend": 1, "position": 1 }
+    },
+    {
+      "type": "Blur",
+      "enabled": true,
+      "config": { "intensity": 1 }
+    }
+  ]
+}
