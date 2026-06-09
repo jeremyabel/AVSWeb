@@ -1,4 +1,4 @@
-const GOOGLE_FONTS_API_KEY = 'AIzaSyBQNUok2LtX8sO8H1zcoYuBngfTKZcPfV8';
+const GOOGLE_FONTS_API_KEY = 'API_KEY_HERE';
 let _fontsCache = null;
 let _fontsFetchPromise = null;
 
